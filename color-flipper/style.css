@@ -2,7 +2,7 @@
   font-family: 'Prata', serif;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: 400;
+  font-weight: 50%;
   background-color: rgb(252, 252, 252);
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -19,47 +19,57 @@
 
 html,body, #app {
   margin: 0;
-  min-height: 100vh;
+  max-height: 100vh;
+  max-width: 100vh;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .block {
   background-color: #dcd78994;
-
+  border-radius: 15rem;
   color: rgba(255, 255, 255, 0.87);
   padding: 1rem;
-  min-width: 50%;
+  max-width: 70%;
+  min-width: 60%;
   text-align: center;
-  animation: easel 6s infinite;
+  animation: easel 5s infinite;
 }
 
 @keyframes easel {
   0%{
-    opacity: 0.1;
-  }
-  50%{
     opacity: 0.7;
   }
+  50%{
+    opacity: 1;
+  }
   100%{
-    opacity:0.1;
+    opacity:0.7;
   }
 }
 
 
 
 #app{
-  display: flex;
+  display:flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  
   gap: 0.5rem;
   padding: 15rem;
+  font-size:medium;
 }
 
 #color-picker {
-  min-width: 50%;
+  max-width: 80%;
+  min-width: 60%;
   padding:0.5rem;
-  font-size: 1rem;
+  background:local;
+  font-size-adjust: inherit;
+
   
+ 
 }
 
